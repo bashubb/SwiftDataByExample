@@ -12,12 +12,14 @@ struct ContentView: View {
     @Environment(\.modelContext) var modelContext
     @State private var path = [Destination]()
     @State private var sortOrder = SortDescriptor(\Destination.name)
+    @State private var searchText = ""
     
     var body: some View {
         NavigationStack(path: $path) {
-            DestinationListingView(sort: sortOrder)
+            DestinationListingView(sort: sortOrder, searchString: searchText)
+                .searchable(text: $searchText)
                 .navigationTitle("iTour")
-                .navigationDestination(for: Destination.self) { destination in
+                .navigationDestination(for: Destination.self){ destination in
                     EditDestinationView(destination: destination)
                 }
                 .toolbar{
