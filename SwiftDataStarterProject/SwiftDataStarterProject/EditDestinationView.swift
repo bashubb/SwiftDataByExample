@@ -15,9 +15,15 @@ struct EditDestinationView: View {
     @Environment(\.dismiss) var dismiss
     @Bindable var destination: Destination
     @State private var newSightName = ""
-    @State private var backButtonHidden = true
     
     @State private var photosItem: PhotosPickerItem?
+    
+    var backButtonHidden: Bool {
+        if destination.name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return true
+        }
+        return false
+    }
     
     var sortedSights : [Sight] {
         destination.sights.sorted {
@@ -81,14 +87,6 @@ struct EditDestinationView: View {
                 destination.image = try? await photosItem?.loadTransferable(type: Data.self)
             }
         }
-        .onAppear{
-            backButtonHidden = destination.name.isEmpty ? true : false
-        }
-        .onChange(of: destination.name) { _, newValue in
-            backButtonHidden = newValue.isEmpty ? true : false
-            
-        }
-        
     }
     
     func addSight() {
