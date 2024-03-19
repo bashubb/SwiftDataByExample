@@ -11,6 +11,7 @@ import SwiftData
 @Model
 class Sight {
     var name: String
+    var destination: Destination?
     
     init(name: String) {
         self.name = name

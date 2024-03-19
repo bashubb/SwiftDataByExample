@@ -15,6 +15,7 @@
 		B502A7432BA958C400FCA90F /* EditDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A7422BA958C400FCA90F /* EditDestinationView.swift */; };
 		B502A7452BA980F000FCA90F /* DestinationListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A7442BA980F000FCA90F /* DestinationListingView.swift */; };
 		B502A7472BA9910200FCA90F /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A7462BA9910200FCA90F /* Sight.swift */; };
+		B502A7492BA9F3D400FCA90F /* SightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A7482BA9F3D300FCA90F /* SightsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B502A7422BA958C400FCA90F /* EditDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDestinationView.swift; sourceTree = "<group>"; };
 		B502A7442BA980F000FCA90F /* DestinationListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListingView.swift; sourceTree = "<group>"; };
 		B502A7462BA9910200FCA90F /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
+		B502A7482BA9F3D300FCA90F /* SightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B502A7322BA9505B00FCA90F /* ContentView.swift */,
 				B502A7462BA9910200FCA90F /* Sight.swift */,
 				B502A7442BA980F000FCA90F /* DestinationListingView.swift */,
+				B502A7482BA9F3D300FCA90F /* SightsView.swift */,
 				B502A7422BA958C400FCA90F /* EditDestinationView.swift */,
 				B502A7402BA952C200FCA90F /* Destination.swift */,
 				B502A7342BA9505E00FCA90F /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B502A7332BA9505B00FCA90F /* ContentView.swift in Sources */,
+				B502A7492BA9F3D400FCA90F /* SightsView.swift in Sources */,
 				B502A7312BA9505B00FCA90F /* SwiftDataStarterProjectApp.swift in Sources */,
 				B502A7412BA952C200FCA90F /* Destination.swift in Sources */,
 				B502A7472BA9910200FCA90F /* Sight.swift in Sources */,

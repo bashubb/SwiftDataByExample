@@ -27,6 +27,7 @@ struct DestinationListingView: View {
             }
             .onDelete(perform: deleteDestinations)
         }
+
     }
     func deleteDestinations(_ indexSet: IndexSet) {
         for index in indexSet {
@@ -35,17 +36,19 @@ struct DestinationListingView: View {
         }
     }
     
-    init(sort: SortDescriptor<Destination>, searchString: String) {
+    //challenge 2
+    init(sort: [SortDescriptor<Destination>], searchString: String, minimumDate: Date) {
         _destinations = Query(filter: #Predicate {
             if searchString.isEmpty {
-                return true
+                return $0.date > minimumDate
             } else {
-                return $0.name.localizedStandardContains(searchString)
+                return $0.date > minimumDate && ($0.name.localizedStandardContains(searchString) || $0.sights.contains { $0.name.localizedStandardContains(searchString) }) 
             }
-        },sort: [sort])
+            //challenge 2
+        },sort: sort)
     }
 }
 
 #Preview {
-    DestinationListingView(sort: SortDescriptor(\Destination.name), searchString: "")
+    DestinationListingView(sort: [SortDescriptor(\Destination.name)], searchString: "", minimumDate: .distantPast)
 }
